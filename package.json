@@ -1,0 +1,34 @@
+{
+    "name": "nconf-jsonminify",
+    "description": "A simple wrapper for nconf + jsonminify.",
+    "version": "0.1.0",
+    "author": {
+        "name":  "William Yeh",
+        "email": "william.pjyeh@gmail.com"
+    },
+
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/William-Yeh/nconf-jsonminify.git"
+    },
+
+    "keywords": [
+        "configuration",
+        "json",
+        "minifier"
+    ],
+
+    "dependencies": {
+        "nconf": "0.6.9",
+        "jsonminify": "0.2.3"
+    },
+
+    "engines": {
+        "node": ">=0.8.0",
+        "npm":  ">=1.1.0"
+    },
+
+    "main": "./load_config.js",
+
+    "license" : "MIT"
+}
