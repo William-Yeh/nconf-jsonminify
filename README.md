@@ -27,12 +27,27 @@ var conf = require('nconf-jsonminify');
 
 
 /*
+ * load from config directory
+ */
+
+// load: config/{NODE_ENV}.json or config/default.json
+conf.load();
+
+// load: config/{NODE_ENV}.json or config/default.json
+conf.load('config');
+
+// load: config/development.json
+conf.load('config', 'development');
+
+
+/*
  * load from config file
  */
+
 conf.loadFile('config/development.json');
-//conf.loadFile('config/test.json');
-//conf.loadFile('config/staging.json');
-//conf.loadFile('config/production.json');
+conf.loadFile('config/testing.json');
+conf.loadFile('config/staging.json');
+conf.loadFile('config/production.json');
 
 
 /*
@@ -46,7 +61,7 @@ conf.loadString('{ "users": [ "Alice", "Bob", "Carol" ] }');
  */
 var host  = conf.get('host');
 var port  = conf.get('port');
-var users = conf.get('name'); 
+var users = conf.get('name');
 //...
 
 ```
@@ -60,5 +75,6 @@ var users = conf.get('name');
 
 ## License
 
-MIT License.
+Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT license](http://creativecommons.org/licenses/MIT/).
 
+Copyright © 2013+ William Yeh [https://github.com/William-Yeh](https://github.com/William-Yeh).
